@@ -52,7 +52,7 @@ export default function ValentineAsk() {
   function moveNoButton() {
     if (accepted) return
 
-    setNoPos({ x: rand(8, 78), y: rand(18, 78) })
+    setNoPos({ x: rand(5, 95), y: rand(10, 90) })
     setNoScale((s) => clamp(s * 0.85, 0.25, 1))
     setYesScale((s) => clamp(s * 1.12, 1, 2.6))
     setNoAttempts((n) => n + 1)
@@ -100,12 +100,12 @@ export default function ValentineAsk() {
     <main className="min-h-screen bg-gradient-to-b from-pink-200 via-rose-100 to-red-200 flex items-center justify-center p-6 overflow-hidden">
       <div className="relative w-full max-w-xl">
         <div className="rounded-3xl bg-white/75 backdrop-blur shadow-xl p-8 text-center">
-          <h1 className="text-3xl font-extrabold">
+          <h1 className="text-3xl font-extrabold text-gray-800">
             Will you go out with me for Valentine’s Day?
           </h1>
 
           {!accepted && (
-            <p className="mt-3 text-lg">
+            <p className="mt-3 text-lg text-gray-700">
               {noAttempts === 0 ? 'choose wisely 😇' : taunt}
             </p>
           )}
